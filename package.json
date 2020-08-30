@@ -1,17 +1,29 @@
 {
-  "name": "node-first-steps",
+  "name": "settings-bill-expressjs",
   "version": "1.0.0",
   "description": "",
-  "main": "greet.js",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express-handlebars": "^5.1.0"
+  },
+  "devDependencies": {
+    "mocha": "^8.1.3"
+  },
   "scripts": {
     "test": "mocha"
   },
-  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thulijay/settings-bill-expressjs.git"
+  },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "chalk": "^4.1.0",
-    "express": "^4.17.1",
-    "figlet": "^1.5.0"
-  }
+  "bugs": {
+    "url": "https://github.com/thulijay/settings-bill-expressjs/issues"
+  },
+  "homepage": "https://github.com/thulijay/settings-bill-expressjs#readme"
 }
