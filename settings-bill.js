@@ -7,36 +7,41 @@ module.exports = function SettingsBill(){
     let actionList = [];
     
     function setSettings(settings){
+    
         smsCost = Number(settings.smsCost);
         callCost = Number(settings.callCost);
         warningLevel = settings.warningLevel;
         criticalLevel = settings.criticalLevel;
-    }
+    
+}
     
     function getSettings(){
-        return {
+                return {
             smsCost,
             callCost,
             warningLevel,
             criticalLevel
         }
+    
     }
 
     function recordAction(action){
-        let cost = 0;
+        
         if (!hasReachedCriticalLevel()) { 
+            let cost = 0;
+
          if(action === 'sms'){
-            cost = smsCost;
+            cost = Number(smsCost);
         }else if (action === 'call') {
-            cost = callCost;
+            cost = Number(callCost);
         }
 
         actionList.push({
             type: action,
             cost, 
             timestamp: new Date()
-        });}
-    
+        });
+    }
     }
 
     function actions(){
